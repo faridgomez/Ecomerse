@@ -13,6 +13,9 @@ public class producto {
     private int cantidad;
     private String descripcion;
     private String imagen;
+    
+    @ManyToOne
+    private Usuario usuarios;
 
     public producto(){
     }
@@ -62,11 +65,20 @@ public class producto {
         this.imagen = imagen;
     }
 
+    public Usuario getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuario usuarios) {
+        this.usuarios = usuarios;
+    }
+
     @Override
     public String toString() {
         return "producto [idProducto=" + idProducto + ", nombre=" + nombre + ", precio=" + precio + ", cantidad="
                 + cantidad + ", descripcion=" + descripcion + ", imagen=" + imagen + "]";
     }
+
 
     
 

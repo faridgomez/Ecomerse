@@ -15,6 +15,13 @@ public class Orden {
     private Date fechaRecibida;
 
     private double total;
+    
+    @ManyToOne
+    private Usuario usuarios;
+    
+    @OneToOne(mappedBy = "orden")
+    private DetalleOrden detalleO;
+    
 
     public Orden(){
     }
@@ -67,12 +74,32 @@ public class Orden {
         this.total = total;
     }
 
+    public Usuario getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuario usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public DetalleOrden getDetalleO() {
+        return detalleO;
+    }
+
+    public void setDetalleO(DetalleOrden detalleO) {
+        this.detalleO = detalleO;
+    }
+
+
     @Override
     public String toString() {
         return "Orden [id=" + id + ", numero=" + numero + ", fechaCreacion=" + fechaCreacion + ", fechaRecibida="
                 + fechaRecibida + ", total=" + total + "]";
     }
 
+
+
+ 
     
 
 }

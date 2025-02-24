@@ -14,6 +14,12 @@ public class DetalleOrden {
     private double precio;
     private double total;
 
+    @OneToOne
+    private Orden orden;
+    
+    @ManyToOne
+    private producto productos;
+
     public DetalleOrden() {
     }
 
@@ -63,6 +69,22 @@ public class DetalleOrden {
 
     public void setTotal(double total) {
         this.total = total;
+    }
+
+    public Orden getOrden() {
+        return orden;
+    }
+
+    public void setOrden(Orden orden) {
+        this.orden = orden;
+    }
+
+    public producto getProductos() {
+        return productos;
+    }
+
+    public void setProductos(producto productos) {
+        this.productos = productos;
     }
 
     @Override

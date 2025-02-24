@@ -1,5 +1,7 @@
 package com.First.Ecomerse.Model;
 
+import java.util.*;
+
 import jakarta.persistence.*;
 
 
@@ -17,6 +19,13 @@ public class Usuario {
     private String telefono;
     private String fechaNacimiento;
     private String genero;
+    
+    @OneToMany(mappedBy = "usuarios")
+    private List<producto> productos;
+    
+    @OneToMany(mappedBy = "orden")
+    private List<Orden> Ordenes;
+    
 
     public Usuario() {
     }
@@ -107,6 +116,24 @@ public class Usuario {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+    public List<producto> getProductos() {
+        return productos;
+    }
+
+
+    public void setProductos(List<producto> productos) {
+        this.productos = productos;
+    }
+    
+
+    public List<Orden> getOrdenes() {
+        return Ordenes;
+    }
+
+
+    public void setOrdenes(List<Orden> ordenes) {
+        Ordenes = ordenes;
+    }
 
 
     @Override
@@ -115,7 +142,11 @@ public class Usuario {
                 + ", password=" + password + ", direccion=" + direccion + ", telefono=" + telefono
                 + ", fechaNacimiento=" + fechaNacimiento + ", genero=" + genero + "]";
     }
-    
+
+
+
+
+   
     
     
 }
