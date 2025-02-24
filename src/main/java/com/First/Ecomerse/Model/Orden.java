@@ -2,7 +2,13 @@ package com.First.Ecomerse.Model;
 
 import java.util.Date;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table
 public class Orden {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String numero;
     private Date fechaCreacion;

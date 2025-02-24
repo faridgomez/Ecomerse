@@ -1,6 +1,12 @@
 package com.First.Ecomerse.Model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table
 public class producto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProducto;
     private String nombre;
     private double precio;

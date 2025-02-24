@@ -1,6 +1,13 @@
 package com.First.Ecomerse.Model;
 
+import jakarta.persistence.*;
+
+
+@Entity
+@Table
 public class DetalleOrden {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private double cantidad;

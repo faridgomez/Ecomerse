@@ -8,7 +8,7 @@ public class EcomerseApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(EcomerseApplication.class, args);
-		System.out.println("hola mundo");
+		
 	}
 
 }
