@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table
-public class producto {
+public class Productos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idProducto;
@@ -17,10 +17,10 @@ public class producto {
     @ManyToOne
     private Usuario usuarios;
 
-    public producto(){
+    public Productos(){
     }
 
-    public producto(int idProducto, String nombre, double precio, int cantidad, String descripcion, String imagen) {
+    public Productos(int idProducto, String nombre, double precio, int cantidad, String descripcion, String imagen) {
         this.idProducto = idProducto;
         this.nombre = nombre;
         this.precio = precio;

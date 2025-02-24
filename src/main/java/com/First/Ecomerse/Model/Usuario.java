@@ -21,10 +21,10 @@ public class Usuario {
     private String genero;
     
     @OneToMany(mappedBy = "usuarios")
-    private List<producto> productos;
+    private List<Productos> productos;
     
-    @OneToMany(mappedBy = "orden")
-    private List<Orden> Ordenes;
+    @OneToMany(mappedBy = "usuarios")
+    private List<Orden> ordenes;
     
 
     public Usuario() {
@@ -116,23 +116,22 @@ public class Usuario {
     public void setGenero(String genero) {
         this.genero = genero;
     }
-    public List<producto> getProductos() {
+    public List<Productos> getProductos() {
         return productos;
     }
 
 
-    public void setProductos(List<producto> productos) {
+    public void setProductos(List<Productos> productos) {
         this.productos = productos;
     }
     
-
     public List<Orden> getOrdenes() {
-        return Ordenes;
+        return ordenes;
     }
 
 
     public void setOrdenes(List<Orden> ordenes) {
-        Ordenes = ordenes;
+        this.ordenes = ordenes;
     }
 
 
@@ -143,6 +142,8 @@ public class Usuario {
                 + ", fechaNacimiento=" + fechaNacimiento + ", genero=" + genero + "]";
     }
 
+
+    
 
 
 
