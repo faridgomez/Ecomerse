@@ -1,14 +1,17 @@
 package com.First.Ecomerse.Controller;
 
+import org.slf4j.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @Controller
 @RequestMapping("/Productos")
 public class ProductosControllador {
+
+    private final Logger LOGGER = LoggerFactory.getLogger(ProductosControllador.class);
     @GetMapping("")
     public String show() {
         return "Productos/Mostrar";
