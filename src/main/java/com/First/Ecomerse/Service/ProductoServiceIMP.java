@@ -27,7 +27,6 @@ public class ProductoServiceIMP implements ProductoService{
 
     @Override
     public void update(Productos productos) {
-        // TODO Auto-generated method stub
         productoRepository.save(productos);    
     }
 
