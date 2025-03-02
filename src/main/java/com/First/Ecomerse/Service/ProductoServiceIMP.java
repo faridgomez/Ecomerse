@@ -1,5 +1,6 @@
 package com.First.Ecomerse.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +36,9 @@ public class ProductoServiceIMP implements ProductoService{
         productoRepository.deleteById(idProducto);
     }
 
+    @Override
+    public List<Productos> findAll() {
+    return productoRepository.findAll();   
+    }
+    
 }

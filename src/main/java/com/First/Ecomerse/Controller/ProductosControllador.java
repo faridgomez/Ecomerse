@@ -3,6 +3,7 @@ package com.First.Ecomerse.Controller;
 import org.slf4j.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -23,7 +24,8 @@ public class ProductosControllador {
     private ProductoService productoService;
 
     @GetMapping("")
-    public String show() {
+    public String show(Model model) {
+        model.addAttribute("productos", productoService.findAll());
         return "Productos/Mostrar";
     }
 
@@ -38,6 +40,7 @@ public class ProductosControllador {
         
         Usuario U = new Usuario(1, null, null, null, null, null, null, null, null);
         productos.setUsuarios(U);
+        
         
         productoService.save(productos);
         return "redirect:/Productos";
