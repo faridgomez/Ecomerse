@@ -19,6 +19,8 @@ import com.First.Ecomerse.Model.Usuario;
 import com.First.Ecomerse.Service.ProductoService;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @RequestMapping("/Productos")
@@ -80,6 +82,12 @@ public class ProductosControllador {
     public String update(Productos productos) {
         LOGGER.info("Este es el producto para actualizar {}", productos);
         productoService.update(productos);
+        return "redirect:/Productos";
+    }
+    
+    @GetMapping("/eliminar/{id}")
+    public String delete(@PathVariable Integer id) {
+        productoService.delete(id);
         return "redirect:/Productos";
     }
     
