@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 public class DetalleOrden {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String nombre;
     private double cantidad;
     private double precio;

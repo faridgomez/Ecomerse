@@ -8,7 +8,7 @@ import com.First.Ecomerse.Model.Productos;
 
 public interface ProductoService {
     public Productos save(Productos productos);
-    public Optional<Productos> get(Integer idProducto);
+    public Optional<Productos> get(int idProducto);
     public void update(Productos productos);
     public void delete(Integer idProducto);
     public List<Productos> findAll();

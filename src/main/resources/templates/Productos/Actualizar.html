@@ -23,7 +23,7 @@
 <body>
 
   <!-- Navigation -->
-  <div class="container-fluid" th:include="/Administrador/admin_template.html::header"></div>
+  <div th:insert="~{/Administrador/admin_template.html::header}"></div>
 
     <div class="container-fluid">
       <!-- Page Heading/Breadcrumbs -->
@@ -125,7 +125,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
-  <div  th:include="/Administrador/admin_template.html::footer"></div>
+    <div th:insert="~{/Administrador/admin_template.html::footer}"></div>
 
   <!-- Bootstrap core JavaScript -->
   <script th:src="@{/vendor/jquery/jquery.min.js}"></script>

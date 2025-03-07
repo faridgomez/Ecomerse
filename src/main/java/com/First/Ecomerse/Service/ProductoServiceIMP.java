@@ -10,25 +10,24 @@ import com.First.Ecomerse.Model.Productos;
 import com.First.Ecomerse.Repository.ProductoRepository;
 
 @Service
-public class ProductoServiceIMP implements ProductoService{
+public class ProductoServiceIMP implements ProductoService {
 
     @Autowired
     private ProductoRepository productoRepository;
-    
+
     @Override
     public Productos save(Productos productos) {
         return productoRepository.save(productos);
-        
+
     }
 
-    @Override
-    public Optional<Productos> get(Integer idProducto) {
-        return productoRepository.findById(idProducto);
+    public Optional<Productos> get(int id) {
+        return productoRepository.findById(id); // Usa 'id' en lugar de 'idProducto'
     }
 
     @Override
     public void update(Productos productos) {
-        productoRepository.save(productos);    
+        productoRepository.save(productos);
     }
 
     @Override
@@ -38,7 +37,7 @@ public class ProductoServiceIMP implements ProductoService{
 
     @Override
     public List<Productos> findAll() {
-    return productoRepository.findAll();   
+        return productoRepository.findAll();
     }
-    
+
 }

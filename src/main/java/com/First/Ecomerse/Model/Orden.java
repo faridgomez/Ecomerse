@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class Orden {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String numero;
     private Date fechaCreacion;
     private Date fechaRecibida;

@@ -2,6 +2,8 @@ package com.First.Ecomerse.Model;
 
 
 
+
+
 import jakarta.persistence.*;
 
 @Entity
@@ -12,70 +14,74 @@ public class Productos {
     private int idProducto;
     private String nombre;
     private double precio;
-    private int cantidad;
+    private Integer cantidad;
     private String descripcion;
-    @Lob
-    private String imagen;
-    
+    private String img;
+
     @ManyToOne
     private Usuario usuarios;
 
-    public Productos(){
+    public Productos() {
     }
 
-    
-    public Productos(int idProducto, String nombre, double precio, int cantidad, String descripcion,
-            String imagen, Usuario usuarios) {
+    public Productos(int idProducto, String nombre, double precio, int cantidad, String descripcion, String img,
+            Usuario usuarios) {
         this.idProducto = idProducto;
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
         this.descripcion = descripcion;
-        this.imagen = imagen;
+        this.img = img;
         this.usuarios = usuarios;
     }
 
-
-    public int getIdProducto() {
+    public Integer getIdProducto() {
         return idProducto;
     }
-    public void setIdProducto(int idProducto) {
+
+    public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public double getPrecio() {
         return precio;
     }
+
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
     public int getCantidad() {
         return cantidad;
     }
+
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
     public String getDescripcion() {
         return descripcion;
     }
+
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getImg() {
+        return img;
     }
 
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
+    public void setImg(String img) {
+        this.img = img;
     }
-
 
     public Usuario getUsuarios() {
         return usuarios;
@@ -88,16 +94,7 @@ public class Productos {
     @Override
     public String toString() {
         return "Productos [idProducto=" + idProducto + ", nombre=" + nombre + ", precio=" + precio + ", cantidad="
-                + cantidad + ", descripcion=" + descripcion + ", imagen=" + imagen + ", usuarios=" + usuarios + "]";
+                + cantidad + ", descripcion=" + descripcion + ", img=" + img + ", usuarios=" + usuarios + "]";
     }
-
-
-
-
-
-    
-
-
-    
 
 }
