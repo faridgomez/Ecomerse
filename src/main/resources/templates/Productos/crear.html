@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
+<html
+  lang="es"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:tiles="http://www.thymeleaf.org"
+>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -41,7 +45,6 @@
         th:action="@{/Productos/save}"
         method="post"
         enctype="multipart/form-data"
-        
       >
         <div class="form-group">
           <label class="control-label col-sm-2" for="nombre">Nombre:</label>
@@ -98,7 +101,6 @@
               class="form-control"
               id="descripcion"
               name="descripcion"
-              placeholder="Ingrese la descripcion del producto"
               required
               autocomplete="off"
             >

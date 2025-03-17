@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:tiles="http://www.thymeleaf.org">
   <head>
     <meta charset="utf-8" />
     <meta
@@ -41,7 +41,7 @@
         method="post"
         enctype="multipart/form-data"
       >
-        <input type="hidden" name="idProducto" th:value="${productos.idProducto}" />
+      <input type="hidden" name="idProducto" th:value="${productos.idProducto}" />
         <div class="form-group">
           <label class="control-label col-sm-2" for="nombre"  >Nombre:</label>
           <div class="col-sm-10">
@@ -111,7 +111,7 @@
         <div class="form-group">
           <label class="control-label col-sm-2" for="img">Imagen:</label>
           <div class="col-sm-10">
-            <input type="file" class="form-control-file" id="img" name="img" />
+            <input type="file" class="form-control-file" id="img" name="file" />
           </div>
         </div>
 
